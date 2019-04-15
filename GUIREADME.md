@@ -1,35 +1,34 @@
 Executing SDx Examples in the SDx GUI
 ===============================================================================
 
-The examples available in the SDx GitHub repository can be compiled by using either the provided Makefiles or the SDx GUI. Documentation on how to Makefile compilation is included in the README file of each example. This document outlines the steps to run an example application in the SDx GUI.
+可以使用提供的Makefile或SDx GUI编译SDx GitHub存储库中可用的示例。有关如何进行Makefile编译的文档包含在每个示例的README文件中。本文档概述了在SDx GUI中运行示例应用程序的步骤。
 
-To use an example in the GUI, it must be downloaded as an example template, then a new project must be created using the example template. The steps to do this are described below.
+要在GUI中使用示例，必须将其作为示例模板下载，然后必须使用示例模板创建新项目。执行此操作的步骤如下所述。
 
 ### Download the example template in the GUI
-- Open the SDx GUI by running the following command in the terminal window:
+- 通过在终端窗口中运行以下命令来打开SDx GUI：
 ```
     sdx
 ```
 
-- Select *SDx Example Store...* from the *Xilinx* menu. This will open a dialog where you can download example templates.
+- 从*Xilinx* 菜单中选择*SDx Example Store...* 。这将打开一个对话框，您可以在其中下载示例模板。
+- 第一次打开对话框时，将下载示例存储库。要下载示例的更新，请单击*Update*。
 
-- When the dialog is opened the first time, the example repositories will be downloaded. To download updates to the examples, click *Update*.
+- 下载示例后，示例将显示为*Installed*。
+*注意：*安装示例后，在创建新的SDx项目时，它们将作为项目模板提供。
 
-- After downloading the examples, the examples will show as *Installed*.
-
-*Note:* After installing the examples, they will be available as project templates when creating a new SDx project.
-
-- Close the dialog.
+- 关闭对话框。
 
 
-### Create the Hello Application Example Project in the GUI
-- In the SDx GUI, Create a new project for the example design. This will open the *New Project Wizard*.
+### 在GUI中创建Hello Application示例项目
+- 在SDx GUI中，为示例设计创建一个新项目。这将打开*New Project Wizard*。
 
-- In the *Templates* page, select an example that has been downloaded.
+- 在*Templates* 页面中，选择已下载的示例。
 
-*Note:* some examples require specific hardware or runtime support, and will only be available for matching platforms and runtimes in the *New Project Wizard*.
 
-- Finish the wizard. The project will be created with the sources and project settings required to build and run the example.
+*注意：*某些示例需要特定的硬件或运行时支持，并且仅适用于*New Project Wizard*中的匹配平台和运行时。
 
-- Build and run the application.
+- 完成向导。将使用构建和运行示例所需的源和项目设置创建项目。
+
+- 构建并运行应用程序.
 
