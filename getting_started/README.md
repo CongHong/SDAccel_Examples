@@ -9,19 +9,19 @@ __前期准备__
 
 编号    | 目录       | 描述 
 --------|-----------|-----------------------------------------
-1 | [hello_world][]      |Hello World examples for new users
-2 | [cpu_to_fpga][]      |Labs to showcase the cpu to fpga conversion with kernel optimizations.
-3 | [host][]      |OpenCL host code for optimized interfacing with Xilinx Devices
-4 | [kernel_to_gmem][]      |Kernel to Global Memory Access Optimization.
-5 | [kernel_opt][]      |Kernel Optimization for performance
-6 | [dataflow][]      |Kernel Optimization through Macro Level Pipelining
-7 | [clk_freq][]      |Improving Kernel Clock Frequency through Optimized code.
-8 | [debug][]      |Debugging and Profiling of Kernel.
-9 | [rtl_kernel][]      |RTL Kernel Based Examples
+1 | [hello_world][]      |"Hello World"新用户示例
+2 | [cpu_to_fpga][]      |实验室通过内核优化展示cpu到fpga的转换。
+3 | [host][]      |OpenCL主机代码，用于优化与Xilinx器件的接口。
+4 | [kernel_to_gmem][]      |内核到全局内存访问优化。
+5 | [kernel_opt][]      |性能的内核优化。
+6 | [dataflow][]      |通过宏级别流水线进行内核优化。
+7 | [clk_freq][]      |通过优化代码提高内核时钟频率。
+8 | [debug][]      |内核的调试和分析。
+9 | [rtl_kernel][]      |基于RTL内核的示例。
 
- __Examples Table__ 
+ __实例列表__ 
 
-Example        | Description           | Key Concepts / Keywords 
+实例           | 描述                  | 关键概念/关键词 
 ---------------|-----------------------|-------------------------
 [hello_world/helloworld_c/][]|This is simple example of vector addition to describe how to use HLS kernels in Sdx Environment. This example highlights the concepts like PIPELINE which increases the kernel performance |__Key__ __Concepts__<br> - HLS C Kernel<br> - OpenCL Host APIs<br>__Keywords__<br> - gmem<br> - bundle<br> - #pragma HLS INTERFACE<br> - m_axi<br> - s_axi4lite
 [hello_world/helloworld_ocl/][]|This example is a simple OpenCL application. It will highlight the basic flow of an OpenCL application.|__Key__ __Concepts__<br> - OpenCL API<br>
