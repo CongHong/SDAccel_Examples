@@ -1,13 +1,13 @@
 Getting Started Examples
 ==================================
-This page contains examples for users who are new to Xilinx SDx OpenCL Flows. The focus of the examples is towards code optimization for Xilinx devices.The table lists various categories of examples in suggested order which users can follow.
+此页面包含Xilinx SDx OpenCL Flows新手的用户示例。这些示例的重点是针对Xilinx器件的代码优化。该表按用户可以遵循的建议顺序列出了各种类别的示例。
 
 
-__Prerequisites__
- - User is familiar with basics of OpenCL flow.
- - User has gone through SDx tutorial and is familiar with basics of tool functionality and terminology.
+__前期准备__
+ - 用户熟悉OpenCL流程的基础知识。
+ - 用户已通过SDx教程，熟悉工具功能和术语的基础知识。
 
-S.No.   | Category  | Description 
+编号    | 目录       | 描述 
 --------|-----------|-----------------------------------------
 1 | [hello_world][]      |Hello World examples for new users
 2 | [cpu_to_fpga][]      |Labs to showcase the cpu to fpga conversion with kernel optimizations.
