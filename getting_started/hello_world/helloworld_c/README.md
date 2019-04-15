@@ -72,10 +72,10 @@ where
 *注意：*软件仿真流程仅为功能正确性检查。它不会估计应用程序在硬件中的性能。
 硬件仿真流程是为应用程序生成的硬件的周期精确模拟。因此，预计此模拟需要很长时间。
 对于此示例，建议用户跳过运行硬件仿真或修改示例以处理简化数据集。
-### Executing Emulated Application 
-***Recommended Execution Flow for Example Applications in Emulation*** 
+### 执行模拟应用程序 
+***仿真中示例应用程序的推荐执行流程*** 
 
-The makefile for the application can directly executed the application with the following command:
+应用程序的makefile可以使用以下命令直接执行应用程序：
 ```
 make check TARGET=<sw_emu|hw_emu> DEVICE=<FPGA Platform>
 
@@ -85,52 +85,53 @@ where
 	sw_emu = software emulation
 	hw_emu = hardware emulation
 ```
-If the application has not been previously compiled, the check makefile rule will compile and execute the application in the emulation mode selected by the user.
+如果先前未编译应用程序，则check makefile规则将以用户选择的仿真模式编译并执行应用程序。
 
-***Alternative Execution Flow for Example Applications in Emulation*** 
+***仿真中示例应用程序的替代执行流程*** 
 
-An emulated application can also be executed directly from the command line without using the check makefile rule as long as the user environment has been properly configured.
-To manually configure the environment to run the application, set the following
+只要正确配置了用户环境，也可以直接从命令行执行模拟应用程序，而无需使用check makefile规则。
+要手动配置环境以运行应用程序，请进行以下设置
 ```
 export LD_LIBRARY_PATH=$XILINX_SDX/runtime/lib/x86_64/:$LD_LIBRARY_PATH
 export XCL_EMULATION_MODE=<sw_emu|hw_emu>
 emconfigutil --platform 'xilinx_vcu1525_dynamic' --nd 1
 ```
-Once the environment has been configured, the application can be executed by
+一旦配置了环境，就可以执行应用程序
 ```
 ./host ./xclbin/vadd.<emulation target>.<device name>.xclbin
 ```
-This is the same command executed by the check makefile rule
-### Compiling for Application Execution in the FPGA Accelerator Card
-The command to compile the application for execution on the FPGA acceleration board is
+这与check makefile规则执行的命令相同
+### 在FPGA加速卡中编译应用程序执行
+编译应用程序以在FPGA加速板上执行的命令是
 ```
 make all DEVICE=<FPGA Platform>
 ```
-The default target for the makefile is to compile for hardware. Therefore, setting the TARGETS option is not required.
-*NOTE:* Compilation for application execution in hardware generates custom logic to implement the functionality of the kernels in an application.
-It is typical for hardware compile times to range from 30 minutes to a couple of hours.
+makefile的默认目标是编译硬件。因此，不需要设置TARGETS选项。
+*注意：*在硬件中执行应用程序的编译会生成自定义逻辑，以实现应用程序中内核的功能。
+
+硬件编译时间通常为30分钟到几个小时。
 
 ## 6. 在云环境中的执行
-FPGA acceleration boards have been deployed to the cloud. For information on how to execute the example within a specific cloud, take a look at the following guides.
+FPGA加速板已部署到云端。有关如何在特定云中执行示例的信息，请查看以下指南。
 * [AWS F1 Application Execution on Xilinx Virtex UltraScale Devices]
 * [Nimbix Application Execution on Xilinx Kintex UltraScale Devices]
 
 
 ## 7. 支持
-For more information about SDAccel check the [SDAccel User Guides][]
+有关SDAccel的更多信息，请查看 [SDAccel User Guides][]
 
-For questions and to get help on this project or your own projects, visit the [SDAccel Forums][].
+如有问题并获得有关此项目或您自己的项目的帮助，请访问 [SDAccel Forums][].
 
-To execute this example using the SDAccel GUI, follow the setup instructions in [SDAccel GUI README][]
+要使用SDAccel GUI执行此示例，请按照中的设置说明进行操作 [SDAccel GUI README][]
 
 
 ## 8. 许可和对存储的贡献
-The source for this project is licensed under the [3-Clause BSD License][]
+该项目的来源是根据 [3-Clause BSD License][]
 
-To contribute to this project, follow the guidelines in the [Repository Contribution README][]
+要为此项目做出贡献，请遵循以下指南 [Repository Contribution README][]
 
 ## 9. 致谢
-This example is written by developers at
+这个例子是由开发人员编写的
 - [Xilinx](http://www.xilinx.com)
 
 [3-Clause BSD License]: ../../../LICENSE.txt
