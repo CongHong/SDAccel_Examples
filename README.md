@@ -1,7 +1,7 @@
 SDAccel Example Repository
 ===========================
 
-Welcome to the SDAccel example repository. This repository contains the latest examples to get you started with application optimization targeting Xilinx PCIe FPGA acceleration boards. All examples are ready to be compiled and executed on SDAccel supported boards and accelerated cloud service partners. The repository is organized as follows:
+欢迎使用SDAccel示例存储库。该存储库包含最新的示例，可帮助您开始针对Xilinx PCIe FPGA加速板的应用程序优化。所有示例都可以在支持SDAccel的板卡和加速云服务合作伙伴上进行编译和执行。存储库的组织如下：
 
 1. GETTINGS STARTED
 2. ACCELERATION
@@ -14,34 +14,34 @@ Welcome to the SDAccel example repository. This repository contains the latest e
 
 ### 1. GETTING STARTED
 
-Collection of examples geared at teaching the user best practices in how to use different features of SDAccel and start on their own application.
+收集示例，旨在教授用户如何使用SDAccel的不同功能并从他们自己的应用程序开始的最佳实践。
 
-It is primarily recommended to start with [Hello World][] example which makes the new users aware about the basic structure of an SDAccel based Application. 
+主要建议从[Hello World] []示例开始，使新用户了解基于SDAccel的应用程序的基本结构。 
 
 ### 2. ACCELERATION
 
-Collection of examples in processor offloading to FPGA based compute units.
+处理器卸载到基于FPGA的计算单元的示例集合。
 
 ### 3. VISION
 
-Collection of examples in image and video processing. 
+图像和视频处理中的示例集合。
 
 ### 4. LIBS
 
-Collection of common libraries used across all examples to assist in the quick development of application host code. 
+所有示例中使用的公共库集合有助于快速开发应用程序主机代码。
 
 ### 5. UTILITY
 
-Collection of utility functions used as part of the Makefiles in all of the examples. This set includes Makefile rules and scripts to launch SDAccel compiled applications onto boards hosted by Nimbix directly from the developers terminal shell. 
+在所有示例中，实用程序函数的集合用作Makefile的一部分。该集包括Makefile规则和脚本，用于将SDAccel编译的应用程序直接从开发人员终端shell启动到由Nimbix托管的板上。
 
 
 ## 6. OTHER INFORMATION
 
-For more information check here:
+有关更多信息，请访问：
 [SDAccel User Guides][]
 
 ## 7. SUPPORT
-For questions and to get help on this project or your own projects, visit the [SDAccel Forums][].
+如有问题并获得有关此项目或您自己的项目的帮助，请访问[SDAccel Forums][].
 
 
 [Hello World]: getting_started/hello_world/
