@@ -1,35 +1,35 @@
 Hello World (HLS C/C++ Kernel)
 ======================
 
-This README file contains the following sections:
+“README”文件包含以下部分：
 
-1. OVERVIEW
-2. HOW TO DOWLOAD THE REPOSITORY
-3. SOFTWARE TOOLS AND SYSTEM REQUIREMENTS
-4. DESIGN FILE HIERARCHY
-5. COMPILATION AND EXECUTION
-6. EXECUTION IN CLOUD ENVIRONMENTS
-7. SUPPORT
-8. LICENSE AND CONTRIBUTING TO THE REPOSITORY
-9. ACKNOWLEDGEMENTS
+1. 概述
+2. 如何下载存储库
+3. 软件工具和系统要求
+4. 设计文件层次结构
+5. 编制和执行
+6. 在云环境中的执行
+7. 支持
+8. 许可和对存储的贡献
+9. 致谢
 
 
-## 1. OVERVIEW
-This is simple example of vector addition to describe how to use HLS kernels in Sdx Environment. This example highlights the concepts like PIPELINE which increases the kernel performance 
+## 1. 概述
+这是添加向量的简单示例，用于描述如何在Sdx环境中使用HLS内核。此示例突出显示像PIPELINE这样的概念，它可以提高内核性能
 
-***KEY CONCEPTS:*** HLS C Kernel, OpenCL Host APIs
+***主要概念：*** HLS C内核，OpenCL主机API
 
-***KEYWORDS:*** gmem, bundle, #pragma HLS INTERFACE, m_axi, s_axi4lite
+***关键词:*** gmem, bundle, #pragma HLS INTERFACE, m_axi, s_axi4lite
 
-## 2. HOW TO DOWNLOAD THE REPOSITORY
-To get a local copy of the SDAccel example repository, clone this repository to the local system with the following command:
+## 2. 如何下载存储库
+要获取SDAccel示例存储库的本地副本，请使用以下命令将此存储库克隆到本地系统：
 ```
 git clone https://github.com/Xilinx/SDAccel_Examples examples
 ```
-where examples is the name of the directory where the repository will be stored on the local system.This command needs to be executed only once to retrieve the latest version of all SDAccel examples. The only required software is a local installation of git.
+其中examples是存储库将存储在本地系统上的目录的名称。此命令只需执行一次即可检索所有SDAccel示例的最新版本。唯一需要的软件是git的本地安装。
 
-## 3. SOFTWARE AND SYSTEM REQUIREMENTS
-Board | Device Name | Software Version
+## 3. 软件工具和系统要求
+板卡  | 设备名称     | 软件版本
 ------|-------------|-----------------
 Xilinx Alveo U250|xilinx_u250_xdma_201820_1|SDx 2018.3
 Xilinx Kintex UltraScale KCU1500|xilinx_kcu1500_dynamic|SDx 2018.3
@@ -37,12 +37,12 @@ Xilinx Virtex UltraScale+ VCU1525|xilinx_vcu1525_dynamic|SDx 2018.3
 Xilinx Alveo U200|xilinx_u200_xdma_201820_1|SDx 2018.3
 
 
-*NOTE:* The board/device used for compilation can be changed by adding the DEVICES variable to the make command as shown below
+*注意：*可以通过将DEVICES变量添加到make命令来更改用于编译的板/设备，如下所示
 ```
 make DEVICES=<.xpfm file path> all
 ```
-## 4. DESIGN FILE HIERARCHY
-Application code is located in the src directory. Accelerator binary files will be compiled to the xclbin directory. The xclbin directory is required by the Makefile and its contents will be filled during compilation. A listing of all the files in this example is shown below
+## 4. 设计文件层次结构
+应用程序代码位于src目录中。加速器二进制文件将被编译到xclbin目录。 Makefile需要xclbin目录，并且在编译期间将填充其内容。此示例中的所有文件的列表如下所示
 
 ```
 Makefile
@@ -55,11 +55,11 @@ src/vadd.cpp
 utils.mk
 ```
 
-## 5. COMPILATION AND EXECUTION
-### Compiling for Application Emulation
-As part of the capabilities available to an application developer, SDAccel includes environments to test the correctness of an application at both a software functional level and a hardware emulated level.
-These modes, which are named sw_emu and hw_emu, allow the developer to profile and evaluate the performance of a design before compiling for board execution.
-It is recommended that all applications are executed in at least the sw_emu mode before being compiled and executed on an FPGA board.
+## 5. 编制和执行
+### 编译应用程序仿真
+作为应用程序开发人员可用功能的一部分，SDAccel包括用于在软件功能级别和硬件模拟级别测试应用程序正确性的环境。
+这些名为sw_emu和hw_emu的模式允许开发人员在编译板执行之前分析和评估设计的性能。
+建议所有应用程序至少在sw_emu模式下执行，然后在FPGA板上编译和执行。
 ```
 make all TARGET=<sw_emu|hw_emu> DEVICE=<FPGA Platform>
 ```
@@ -68,9 +68,10 @@ where
 	sw_emu = software emulation
 	hw_emu = hardware emulation
 ```
-*NOTE:* The software emulation flow is a functional correctness check only. It does not estimate the performance of the application in hardware.
-The hardware emulation flow is a cycle accurate simulation of the hardware generated for the application. As such, it is expected for this simulation to take a long time.
-It is recommended that for this example the user skips running hardware emulation or modifies the example to work on a reduced data set.
+
+*注意：*软件仿真流程仅为功能正确性检查。它不会估计应用程序在硬件中的性能。
+硬件仿真流程是为应用程序生成的硬件的周期精确模拟。因此，预计此模拟需要很长时间。
+对于此示例，建议用户跳过运行硬件仿真或修改示例以处理简化数据集。
 ### Executing Emulated Application 
 ***Recommended Execution Flow for Example Applications in Emulation*** 
 
@@ -109,13 +110,13 @@ The default target for the makefile is to compile for hardware. Therefore, setti
 *NOTE:* Compilation for application execution in hardware generates custom logic to implement the functionality of the kernels in an application.
 It is typical for hardware compile times to range from 30 minutes to a couple of hours.
 
-## 6. Execution in Cloud Environments
+## 6. 在云环境中的执行
 FPGA acceleration boards have been deployed to the cloud. For information on how to execute the example within a specific cloud, take a look at the following guides.
 * [AWS F1 Application Execution on Xilinx Virtex UltraScale Devices]
 * [Nimbix Application Execution on Xilinx Kintex UltraScale Devices]
 
 
-## 7. SUPPORT
+## 7. 支持
 For more information about SDAccel check the [SDAccel User Guides][]
 
 For questions and to get help on this project or your own projects, visit the [SDAccel Forums][].
@@ -123,12 +124,12 @@ For questions and to get help on this project or your own projects, visit the [S
 To execute this example using the SDAccel GUI, follow the setup instructions in [SDAccel GUI README][]
 
 
-## 8. LICENSE AND CONTRIBUTING TO THE REPOSITORY
+## 8. 许可和对存储的贡献
 The source for this project is licensed under the [3-Clause BSD License][]
 
 To contribute to this project, follow the guidelines in the [Repository Contribution README][]
 
-## 9. ACKNOWLEDGEMENTS
+## 9. 致谢
 This example is written by developers at
 - [Xilinx](http://www.xilinx.com)
 
